@@ -48,6 +48,10 @@ $Promise.prototype._callHandlers = function() {
     }
 }
 
+$Promise.prototype.catch = function(err) {
+    return this.then(null, err)
+}
+
 
 module.exports = $Promise;
 /*-------------------------------------------------------
